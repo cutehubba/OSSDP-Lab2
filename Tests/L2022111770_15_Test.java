@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 /**
  * 测试类：2022111770_1_Test
  * 测试用例设计原则：等价类划分，选择代表性输入进行测试
+ *
  */
     public class L2022111770_15_Test {
 
