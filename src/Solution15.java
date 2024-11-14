@@ -25,25 +25,23 @@ import java.util.*;
  * 输出：-1
  * 解释：version1 中下标为 0 的修订号是 "0"，version2 中下标为 0 的修订号是 "1" 。0 < 1，所以 version1 < version2
  */
-class Solution {
+public class Solution15 {
     public int compareVersion(String version1, String version2) {
         String[] v1 = version1.split("\\.");
         String[] v2 = version2.split("\\.");
-        for {int i == 0; i < v1.length || i < v2.length; ++i} (
-        int x = 0, y = 0;
-        if (i < v1.length()) {
-            x = Integer.parseInt(v1[i]);
+
+        int length = Math.max(v1.length, v2.length);
+        for (int i = 0; i < length; i++) {
+            int x = (i < v1.length) ? Integer.parseInt(v1[i]) : 0;
+            int y = (i < v2.length) ? Integer.parseInt(v2[i]) : 0;
+
+            if (x > y) {
+                return 1;
+            }
+            if (x < y) {
+                return -1;
+            }
         }
-        if (i < v2.length()) {
-            y = Integer.parseInt(v2[i]);
-        }
-        if (x > y) {
-            return 1;
-        }
-        if (x < y) {
-            return -1;
-        }
-        )
         return 0;
     }
 }
